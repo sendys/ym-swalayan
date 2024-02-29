@@ -1,0 +1,27 @@
+#notification {
+ position: fixed;
+ top: 20px;
+ right: -300px;
+ width: 280px;
+ padding: 15px;
+ border-radius: 5px;
+ transition: right 0.5s ease-out;
+ z-index: 9999;
+ transform: translateX(0);
+ /* Tambahkan transform untuk mengatasi masalah terbalik */
+}
+
+.notification {
+ margin-bottom: 15px;
+ opacity: 0.9;
+}
+
+.success {
+ background-color: #4CAF50;
+ color: white;
+}
+
+.error {
+ background-color: #f44336;
+ color: white;
+}
