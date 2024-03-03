@@ -48,7 +48,6 @@
     <!-- template -->
     <script src="{{ url('theme/dist/js/niche.js') }}"></script>
 
-    <!-- Tambahkan script ini pada halaman login -->
     <script>
         if (window.history.replaceState) {
             window.history.replaceState(null, null, window.location.href);

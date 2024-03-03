@@ -108,7 +108,7 @@ a:hover, a:active, a:focus {
 	z-index: 800
 }
 .main-footer {
-	background: linear-gradient(-45deg, #0308ef 0%, #00B04F 100%);
+	background: linear-gradient(-45deg, #1F935D 0%, #0074D9 50%, #FFA500 100%);
 	padding: 15px;
 	color: #444;
 	font-size: 13px;
@@ -210,7 +210,7 @@ b{
 	display: inherit;
 }
 .main-header .navbar.blue-bg {
-	background: linear-gradient(-45deg, #0308ef 0%, #00B04F 100%);
+	background: linear-gradient(-45deg, #1F935D 0%, #0074D9 50%, #FFA500 100%);
 }
 .layout-top-nav .main-header .navbar {
 	margin-left: 0
@@ -281,10 +281,10 @@ color:#ccc
 	background: #00a65a;
 }
 .icon-circle.blue {
-	background: linear-gradient(-45deg, #0308ef 0%, #00B04F 100%);
+	background: linear-gradient(-45deg, #1F935D 0%, #0074D9 50%, #FFA500 100%);
 }
 .icon-circle.yellow {
-	background: linear-gradient(-45deg, #0308ef 0%, #00B04F 100%);
+	background: linear-gradient(-45deg, #1F935D 0%, #0074D9 50%, #FFA500 100%);
 }
 .notify {
 	position: relative;
@@ -431,7 +431,7 @@ color:#ccc
 	display: none
 }
 .main-header .logo.blue-bg {
-	background: linear-gradient(-45deg, #0308ef 0%, #00B04F 100%)
+	background: linear-gradient(-45deg, #1F935D 0%, #0074D9 50%, #FFA500 100%);
 }
 .main-header .navbar-brand {
 	color: #fff
@@ -760,7 +760,7 @@ ul.fa-ul{
 	padding-top: 60px;
 	min-height: 100%;
 	width: 230px;
-	background: linear-gradient(-45deg, #0308ef 0%, #00B04F 100%);
+	background: linear-gradient(-45deg, #1F935D 0%, #0074D9 50%, #FFA500 100%);
 	z-index: 810;
 	-webkit-transition: -webkit-transform .3s ease-in-out, width .3s ease-in-out;
 	-moz-transition: -moz-transform .3s ease-in-out, width .3s ease-in-out;
@@ -3257,7 +3257,7 @@ ul.plan-list li{
 }
 .nav>li>a:hover, .nav>li>a:active, .nav>li>a:focus {
 	color: #fff;
-	background: #0308ef
+	background: linear-gradient(-45deg, #1F935D 0%, #0074D9 50%, #FFA500 100%);
 }
 .nav-pills>li>a {
 	border-radius: 0;

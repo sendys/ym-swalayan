@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UtamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,28 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+// Routes for handling authentication using Sanctum
 Route::middleware('guest')->group(function () {
     Route::get('/', [AuthController::class, 'index'])->name('login');
     Route::post('/', [AuthController::class, 'login']);
+});
+
+// Routes for authenticated users using Sanctum
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/home', function () {
+        return redirect()->route('admin.dashboard.index');
+    })->name('home');
+
+    // Admin Routes
+    Route::middleware('admin:admin')->group(function () {
+        Route::get('/admin', [UtamaController::class, 'index'])->name('admin.dashboard.index');
+    });
+
+    // Pemilik Routes
+    Route::middleware('admin:pemilik')->group(function () {
+        Route::get('/pemilik', [UtamaController::class, 'index'])->name('admin.dashboard.pemilik');
+    });
+
+    // Logout Route
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
