@@ -28,12 +28,12 @@
                     </a>
                 </li>
 
-                {{-- <li class="">
-                    <a href="">
-                        <i class="fa fa-sitemap"></i>
+                <li class="{{ request()->routeIs('admin.kategori.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.kategori.index') }}">
+                        <i class="fa fa-list"></i>
                         <span>Kategori</span>
                     </a>
-                </li> --}}
+                </li>
 
 
                 {{-- <li

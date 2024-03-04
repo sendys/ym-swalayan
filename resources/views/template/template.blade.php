@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ url('theme/dist/css/notif.css') }}">
 
     <link rel="stylesheet" href="{{ url('theme/dist/css/upload.css') }}">
+    <link rel="stylesheet" href="{{ url('theme/dist/css/tabeldata.css') }}">
 
     <!-- Libraries -->
     <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -41,107 +42,6 @@
         href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.10/css/dataTables.checkboxes.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.1/css/select.dataTables.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
-
-
-    <!-- Styles -->
-    <style>
-        /*Form fields*/
-        .dataTables_wrapper select,
-        .dataTables_wrapper .dataTables_filter input {
-            color: #4a5568;
-            /*text-gray-700*/
-            padding-top: .5rem;
-            /*pl-2*/
-            padding-bottom: .5rem;
-            /*pl-2*/
-            line-height: 1.25;
-            /*leading-tight*/
-            border-width: 2px;
-            /*border-2*/
-            border-radius: .25rem;
-            border-color: #edf2f7;
-            /*border-gray-200*/
-            background-color: #edf2f7;
-            bg-gray-200
-        }
-
-        .dataTables_wrapper select {
-            padding-right: 1.5rem;
-        }
-
-        /*Row Hover*/
-        table.dataTable.hover tbody tr:hover,
-        table.dataTable.display tbody tr:hover {
-            background-color: #ebf4ff;
-            /*bg-indigo-100*/
-        }
-
-        /*Pagination Buttons*/
-        .dataTables_wrapper .dataTables_paginate .paginate_button {
-            font-weight: 700;
-            /*font-bold*/
-            border-radius: .25rem;
-            /*rounded*/
-            border: 1px solid transparent;
-            /*border border-transparent*/
-        }
-
-        /*Pagination Buttons - Current selected */
-        .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-            color: #fff !important;
-            /*text-white*/
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
-            /*shadow*/
-            font-weight: 700;
-            /*font-bold*/
-            border-radius: .25rem;
-            /*rounded*/
-            background: #008652 !important;
-            /*bg-indigo-500*/
-            border: 1px solid transparent;
-            /*border border-transparent*/
-        }
-
-        /*Pagination Buttons - Hover */
-        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-            color: #fff !important;
-            /*text-white*/
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
-            /*shadow*/
-            font-weight: 700;
-            /*font-bold*/
-            border-radius: .25rem;
-            /*rounded*/
-            background: #008652 !important;
-            /*bg-indigo-500*/
-            border: 1px solid transparent;
-            /*border border-transparent*/
-        }
-
-        /*Add padding to bottom border */
-        table.dataTable.no-footer {
-            border-bottom: 1px solid #e2e8f0;
-            /*border-b-1 border-gray-300*/
-            margin-top: 0.75em;
-            margin-bottom: 0.75em;
-        }
-
-        /*Change colour of responsive icon*/
-        table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
-        table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
-            background-color: #008652 !important;
-            /*bg-indigo-500*/
-        }
-
-        table.dataTable tr th.select-checkbox.selected::after {
-            content: "✔";
-            margin-top: -11px;
-            margin-left: -4px;
-            text-align: center;
-            text-shadow: rgb(176, 190, 217) 1px 1px, rgb(176, 190, 217) -1px -1px, rgb(176, 190, 217) 1px -1px, rgb(176, 190, 217) -1px 1px;
-        }
-    </style>
 
     @include('partials.script')
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UtamaController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,13 +29,14 @@ Route::middleware('auth:sanctum')->group(function () {
     })->name('home');
 
     // Admin Routes
-    Route::middleware('admin:admin')->group(function () {
-        Route::get('/admin', [UtamaController::class, 'index'])->name('admin.dashboard.index');
+    Route::prefix('admin')->name('admin.')->middleware('admin:admin')->group(function () {
+        Route::get('/', [UtamaController::class, 'index'])->name('dashboard.index');
+        Route::resource('kategori', KategoriController::class)->except(['show']);
     });
 
     // Pemilik Routes
-    Route::middleware('admin:pemilik')->group(function () {
-        Route::get('/pemilik', [UtamaController::class, 'index'])->name('admin.dashboard.pemilik');
+    Route::prefix('admin')->name('admin.')->middleware('admin:pemilik')->group(function () {
+        Route::get('/pemilik', [UtamaController::class, 'index'])->name('dashboard.pemilik');
     });
 
     // Logout Route
