@@ -3,13 +3,13 @@
 @section('isi')
     <!-- Content Header (Page header) -->
     <div class="content-header sty-one">
-        <h1 class="text-black">Data Pelanggan</h1>
+        <h1 class="text-black">Data Supplier</h1>
     </div>
     <!-- Main content -->
     <div class="content">
         <div class="info-box">
             <div class="box-header with-border col-md-2">
-                <a href="{{ route('admin.pelanggan.create') }}" class="btn btn-block btn-primary btn-lg">Tambah</a>
+                <a href="{{ route('admin.supplier.create') }}" class="btn btn-block btn-primary btn-lg">Tambah</a>
             </div>
 
             @include('partials.notification')
@@ -19,7 +19,7 @@
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Pelanggan</th>
+                            <th>Suppliyer</th>
                             <th>No Telpon</th>
                             <th>Email</th>
                             <th>Alamat</th>
@@ -30,7 +30,7 @@
                     <tfoot>
                         <tr>
                             <th>No.</th>
-                            <th>Pelanggan</th>
+                            <th>Suppliyer</th>
                             <th>No Telpon</th>
                             <th>Email</th>
                             <th>Alamat</th>
@@ -58,8 +58,8 @@
                         searchable: false
                     },
                     {
-                        data: 'pelanggan',
-                        name: 'pelanggan'
+                        data: 'supplier',
+                        name: 'supplier'
                     },
                     {
                         data: 'telp',

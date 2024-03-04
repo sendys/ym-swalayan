@@ -28,18 +28,52 @@
                     </a>
                 </li>
 
-                <li class="{{ request()->routeIs('admin.kategori.*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.kategori.index') }}">
-                        <i class="fa fa-list"></i>
-                        <span>Kategori</span>
+                <li
+                    class="treeview{{ request()->routeIs('admin.kategori.*') || request()->routeIs('admin.satuan.*') ? ' active' : '' }}">
+                    <a href="#">
+                        <i class="fa fa-list"></i> <span>Data Master</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
+                    <ul class="treeview-menu">
+                        <li class="{{ request()->routeIs('admin.kategori.*') ? 'active' : '' }}">
+                            <a href="{{ route('admin.kategori.index') }}">
+                                <i class="fa fa-list-alt"></i>
+                                <span>Kategori</span>
+                            </a>
+                        </li>
+                        <li class="{{ request()->routeIs('admin.satuan.*') ? 'active' : '' }}">
+                            <a href="{{ route('admin.satuan.index') }}">
+                                <i class="fa fa-balance-scale"></i>
+                                <span>Satuan</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
-                <li class="{{ request()->routeIs('admin.pelanggan.*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.pelanggan.index') }}">
-                        <i class="fa fa-users"></i>
-                        <span>Pelanggan</span>
+                <li
+                    class="treeview{{ request()->routeIs('admin.pelanggan.*') || request()->routeIs('admin.supplier.*') ? ' active' : '' }}">
+                    <a href="#">
+                        <i class="fa fa-list"></i> <span>Pelanggan & Supplier</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
+                    <ul class="treeview-menu">
+                        <li class="{{ request()->routeIs('admin.pelanggan.*') ? 'active' : '' }}">
+                            <a href="{{ route('admin.pelanggan.index') }}">
+                                <i class="fa fa-users"></i>
+                                <span>Pelanggan</span>
+                            </a>
+                        </li>
+                        <li class="{{ request()->routeIs('admin.supplier.*') ? 'active' : '' }}">
+                            <a href="{{ route('admin.supplier.index') }}">
+                                <i class="fa fa-industry"></i>
+                                <span>Supplier</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             @elseif ($userRole == 'pemilik')
                 <li class="{{ request()->routeIs('admin.dashboard.*') ? 'active' : '' }}">

@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UtamaController;
+use App\Http\Controllers\SatuanController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\PelangganController;
 
 /*
@@ -34,6 +36,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/', [UtamaController::class, 'index'])->name('dashboard.index');
         Route::resource('kategori', KategoriController::class);
         Route::resource('pelanggan', PelangganController::class);
+        Route::resource('satuan', SatuanController::class);
+        Route::resource('supplier', SupplierController::class);
     });
 
     // Pemilik Routes
