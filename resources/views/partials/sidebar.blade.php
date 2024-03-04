@@ -37,11 +37,10 @@
 
                 <li class="{{ request()->routeIs('admin.pelanggan.*') ? 'active' : '' }}">
                     <a href="{{ route('admin.pelanggan.index') }}">
-                        <i class="fa fa-list"></i>
+                        <i class="fa fa-users"></i>
                         <span>Pelanggan</span>
                     </a>
                 </li>
-                
             @elseif ($userRole == 'pemilik')
                 <li class="{{ request()->routeIs('admin.dashboard.*') ? 'active' : '' }}">
                     <a href="{{ route('admin.dashboard.index') }}">

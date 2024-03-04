@@ -42,10 +42,10 @@
         </div>
     </div>
     <!-- /.content -->
-    <?php
+    {{-- <?php
     $currentUrl = url()->current();
     echo $currentUrl;
-    ?>
+    ?> --}}
     <script>
         $(document).ready(function() {
             var dataTable = $('#dataTable').DataTable({

@@ -24,9 +24,9 @@ class PelangganRequest extends FormRequest
     {
         return [
             'pelanggan' => 'required|string|max:255',
-            'telp' => 'nullable|string|max:30',
-            'email' => 'nullable|email|max:255',
-            'alamat' => 'nullable|string|max:255',
+            'telp' => 'required|string|max:30',
+            'email' => 'required|email|max:255',
+            'alamat' => 'required|string|max:255',
         ];
     }
 
@@ -40,9 +40,8 @@ class PelangganRequest extends FormRequest
             'telp.max' => 'Nomor telepon tidak boleh lebih dari :max karakter.',
             'telp.numeric' => 'Nomor telepon harus berupa angka.',
 
-            'email.email' => 'Format email tidak valid.',
             'email.required' => 'Email wajib diisi.',
-            'email.max' => 'Email tidak boleh lebih dari :max karakter.',
+            'email.email' => 'Format email tidak valid.',
             'email.unique' => 'Email sudah terdaftar.',
 
             'alamat.required' => 'Alamat wajib diisi.',

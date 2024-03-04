@@ -6,15 +6,7 @@
         <h1 class="text-black">Data Kategori Produk</h1>
     </div>
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    @include('partials.eror')
 
     <!-- Main content -->
     <div class="content">
@@ -31,7 +23,9 @@
                             @csrf
                             <div class="form-body">
                                 <div class="form-group row">
-                                    <label class="control-label text-right col-md-3">Kategori</label>
+                                    <label class="control-label text-right col-md-3">Kategori
+                                        <span class="text-danger">*</span>
+                                    </label>
                                     <div class="col-md-9">
                                         <input type="text" class="form-control @error('kategori') is-invalid @enderror"
                                             id="kategori" name="kategori"
