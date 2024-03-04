@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UtamaController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\PelangganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,8 @@ Route::middleware('auth:sanctum')->group(function () {
     // Admin Routes
     Route::prefix('admin')->name('admin.')->middleware('admin:admin')->group(function () {
         Route::get('/', [UtamaController::class, 'index'])->name('dashboard.index');
-        Route::resource('kategori', KategoriController::class)->except(['show']);
+        Route::resource('kategori', KategoriController::class);
+        Route::resource('pelanggan', PelangganController::class);
     });
 
     // Pemilik Routes

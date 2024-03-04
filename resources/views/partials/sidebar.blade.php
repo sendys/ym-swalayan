@@ -35,30 +35,13 @@
                     </a>
                 </li>
 
-
-                {{-- <li
-                    class="treeview{{ request()->routeIs('admin.kontak.*') || request()->routeIs('admin.jabatan.*') ? ' active' : '' }}">
-                    <a href="#">
-                        <i class="fa fa-users"></i> <span>Alumni & Kata</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
+                <li class="{{ request()->routeIs('admin.pelanggan.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.pelanggan.index') }}">
+                        <i class="fa fa-list"></i>
+                        <span>Pelanggan</span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li class="{{ request()->routeIs('admin.kontak.*') ? 'active' : '' }}">
-                            <a href="{{ route('admin.kontak.index') }}">
-                                <i class="fa fa-envelope"></i>
-                                <span>Kontak</span>
-                            </a>
-                        </li>
-                        <li class="{{ request()->routeIs('admin.jabatan.*') ? 'active' : '' }}">
-                            <a href="{{ route('admin.jabatan.index') }}">
-                                <i class="fa fa-id-badge"></i>
-                                <span>Jabatan</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li> --}}
+                </li>
+                
             @elseif ($userRole == 'pemilik')
                 <li class="{{ request()->routeIs('admin.dashboard.*') ? 'active' : '' }}">
                     <a href="{{ route('admin.dashboard.index') }}">
